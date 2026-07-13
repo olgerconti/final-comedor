@@ -1,0 +1,30 @@
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Backend
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# VSCode
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Logs
+*.log
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+.opencode/
+.specify/
+specs/

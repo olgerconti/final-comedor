@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: comedor-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/comedor_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Lima
+    username: comedor_user
+    password: comedor_pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: comedor-jwt-secret-key-must-be-at-least-256-bits-long-for-hs256
+    expiration-ms: 86400000
